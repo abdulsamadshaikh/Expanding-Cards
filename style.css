@@ -20,7 +20,7 @@ body {
   background-position: center;
   background-attachment: scroll;
   background-size: cover;
-  background-image: url('/imges/body/bg.png');
+  background-image: url('./imges/body/bg.png');
   -webkit-display: flex;
   -moz-display: flex;
   -ms-display: flex;
@@ -218,27 +218,27 @@ body {
 }
 
 #cardsPanel .card:nth-child(1) {
-  background-image: url('/imges/slide_1.jpg');
+  background-image: url('./imges/slide_1.jpg');
 }
 
 #cardsPanel .card:nth-child(2) {
-  background-image: url('/imges/slide_2.jpg');
+  background-image: url('./imges/slide_2.jpg');
 }
 
 #cardsPanel .card:nth-child(3) {
-  background-image: url('/imges/slide_3.jpg');
+  background-image: url('./imges/slide_3.jpg');
 }
 
 #cardsPanel .card:nth-child(4) {
-  background-image: url('/imges/slide_4.jpg');
+  background-image: url('./imges/slide_4.jpg');
 }
 
 #cardsPanel .card:nth-child(5) {
-  background-image: url('/imges/slide_5.jpg');
+  background-image: url('./imges/slide_5.jpg');
 }
 
 #cardsPanel .card:nth-child(6) {
-  background-image: url('/imges/slide_6.jpg');
+  background-image: url('./imges/slide_6.jpg');
 }
 
 .spacer {
