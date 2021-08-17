@@ -1,0 +1,296 @@
+/*  
+Project Name: Expanding Cards
+Project URI: 
+Description: Responsive Expanding Cards, you're free to use in your project. (Blog Posts, Testimonials, and Static Content Cards, etc).
+Author: Abdul Samad
+Author URI: https://getabdulsamad.com/
+Tags: Mobile-friendly, All-Devices-Supported. 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+  background-image: url('/imges/body/bg.png');
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  width: 90vw;
+  padding: 20px;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container > p {
+  text-align: center;
+  font-weight: 500;
+}
+
+#cardsPanel {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-gap: 10px;
+  -moz-gap: 10px;
+  -ms-gap: 10px;
+  -o-gap: 10px;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+#cardsPanel .card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 80vh;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-flex: 0.5;
+  -moz-flex: 0.5;
+  -ms-flex: 0.5;
+  -o-flex: 0.5;
+  flex: 0.5;
+  -webkit-transition: flex 0.7s ease-in;
+  -moz-transition: flex 0.7s ease-in;
+  -ms-transition: flex 0.7s ease-in;
+  -o-transition: flex 0.7s ease-in;
+  transition: flex 0.7s ease-in;
+}
+
+#cardsPanel .card.active {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex: 5;
+  -moz-flex: 5;
+  -ms-flex: 5;
+  -o-flex: 5;
+  flex: 5;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+  -ms-box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+  -o-box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+  box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+}
+
+#cardsPanel .card:after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 35%;
+}
+
+#cardsPanel .card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 10px;
+  opacity: 50%;
+  font-size: 20px;
+  width: max-content;
+  transform: rotate(90deg);
+  transform-origin: 0% 45px;
+}
+
+#cardsPanel .card.active h2 {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.4s;
+  -moz-transition: opacity 0.3s ease-in 0.4s;
+  -ms-transition: opacity 0.3s ease-in 0.4s;
+  -o-transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
+  position: unset;
+  width: auto;
+  transform: unset;
+  transform-origin: unset;
+}
+
+#cardsPanel .card p {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 10px;
+  opacity: 0;
+  font-size: 18px;
+  max-width: 500px;
+}
+
+#cardsPanel .card.active p {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in 0.6s;
+  -moz-transition: opacity 0.5s ease-in 0.6s;
+  -ms-transition: opacity 0.5s ease-in 0.6s;
+  -o-transition: opacity 0.5s ease-in 0.6s;
+  transition: opacity 0.5s ease-in 0.6s;
+}
+
+#cardsPanel .card button {
+  background-color: transparent;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  font-size: 18px;
+  padding: 8px 16px;
+  display: block;
+  max-width: 150px;
+  width: 100%;
+  margin-top: 10px;
+  opacity: 0;
+}
+
+#cardsPanel .card.active button {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in 0.6s;
+  -moz-transition: opacity 0.5s ease-in 0.6s;
+  -ms-transition: opacity 0.5s ease-in 0.6s;
+  -o-transition: opacity 0.5s ease-in 0.6s;
+  transition: opacity 0.5s ease-in 0.6s;
+}
+
+#cardsPanel .card button:hover {
+  background-color: #fff;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  color: #000;
+}
+
+#cardsPanel .card button:active {
+  background-color: #fff;
+  color: #000;
+}
+
+#cardsPanel .card button:focus {
+  background-color: #fff;
+  color: #000;
+}
+
+#cardsPanel .card:nth-child(1) {
+  background-image: url('/imges/slide_1.jpg');
+}
+
+#cardsPanel .card:nth-child(2) {
+  background-image: url('/imges/slide_2.jpg');
+}
+
+#cardsPanel .card:nth-child(3) {
+  background-image: url('/imges/slide_3.jpg');
+}
+
+#cardsPanel .card:nth-child(4) {
+  background-image: url('/imges/slide_4.jpg');
+}
+
+#cardsPanel .card:nth-child(5) {
+  background-image: url('/imges/slide_5.jpg');
+}
+
+#cardsPanel .card:nth-child(6) {
+  background-image: url('/imges/slide_6.jpg');
+}
+
+.spacer {
+  background-color: #444;
+  height: 1px;
+  clear: both;
+  margin: 40px 0px;
+}
+
+/*** Responsive - Media Queries ***/
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 100vw;
+  }
+  #cardsPanel {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #cardsPanel .card {
+    height: 8vh;
+    max-height: 8vh;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -o-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+  #cardsPanel .card.active {
+    height: 90vh;
+    max-height: 90vh;
+    -webkit-transition: max-height 0.9s ease-in-out;
+    -moz-transition: max-height 0.9s ease-in-out;
+    -o-transition: max-height 0.9s ease-in-out;
+    -ms-transition: max-height 0.9s ease-in-out;
+    transition: max-height 0.9s ease-in-out;
+  }
+  #cardsPanel .card h2 {
+    transform: unset;
+    transform-origin: unset;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    width: auto;
+  }
+  #cardsPanel .card p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
